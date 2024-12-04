@@ -2,8 +2,23 @@ import React, { useState } from "react";
 import search from "../../assets/icons/search.svg";
 import bin from "../../assets/icons/bin.svg";
 import { Button, Checkbox } from "../../components";
+
+const options = [
+  { label: "All options", value: "all" },
+  { label: " Vegetarian", value: "vegetarian" },
+  { label: "Vegan", value: "vegan" },
+  { label: "Gluten free", value: "gluten_free" },
+];
+const price = [
+  { label: "$", value: "$" },
+  { label: "$$", value: "$$" },
+  { label: "$$$", value: "$$$" },
+  { label: "$$$$", value: "$$$$" },
+];
+
 export const Sidebar = () => {
-  const [isActive, setIsActive] = useState(false);
+  const [selectedOption, setSelectedOption] = useState("all");
+  const [selectedPrice, setSelectedPrice] = useState("");
 
   return (
     <div className="bg-white3 pl-[55px] pt-[40px] pr-[20px] h-[91vh] w-[30%]">
@@ -36,22 +51,25 @@ export const Sidebar = () => {
         <div>
           <h4 className="text-[20px] text-[#1C140C]">Price</h4>
           <div className="flex gap-2 items-center">
-            <Button>$</Button>
-            <Button> $$ </Button>
-            <Button>$$$</Button>
-            <Button>$$$$</Button>
+           {price.map((price) => (
+             <Button
+             isActive={selectedPrice === price.value}
+             onClick={() => setSelectedPrice(price.value)}
+             >{price.label}</Button>
+           ))}
           </div>
         </div>
 
         <div>
           <h4 className="text-[20px] text-[#1C140C]">Show me:</h4>
           <div className="flex gap-x-4 items-center flex-wrap">
-            <Button>All options</Button>
-            <Button> Vegetarian</Button>
-            <br />
-            <Button> Vegan</Button>
-            <Button> Gluten free</Button>
-            
+            {options.map((option) => (
+              <Button
+                isActive={selectedOption === option.value}
+                onClick={() => setSelectedOption(option.value)}>
+                {option.label}
+              </Button>
+            ))}
           </div>
         </div>
 
