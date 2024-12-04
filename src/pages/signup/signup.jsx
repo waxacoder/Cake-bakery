@@ -16,7 +16,7 @@ export const Signup = () => {
     setIsShowed(!isShowed);
   };
   return (
-    <>
+    <div className="bg-custom-bg bg-position bg-no-repeat bg-cover bg-center h-screen border-[1px] border-gray-400 ">
       <SmallMenu />
       <div className="manrope flex items-center justify-center  ">
         <div className="bg-white2 h-[560px]   px-10 py-12 flex flex-col items-center rounded-[30px] mt-3">
@@ -106,6 +106,6 @@ export const Signup = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
