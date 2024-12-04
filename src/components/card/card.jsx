@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export const Cart = ({ img1, like, box, star, star2 }) => {
+export const Card = ({ img1, like, box, star, star2 }) => {
   return (
     <div className="w-[30%] ">
       <div className="relative ">
