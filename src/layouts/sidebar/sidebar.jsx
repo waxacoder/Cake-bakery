@@ -21,7 +21,7 @@ export const Sidebar = () => {
   const [selectedPrice, setSelectedPrice] = useState("");
 
   return (
-    <div className="bg-white3 pl-[55px] pt-[40px] pr-[20px] h-[91vh] w-[30%]">
+    <div className="bg-white3 pl-[45px] pt-[40px] pr-[20px] h-[91vh] w-[26%]">
       <div className="pl-5 py-[15px] mb-[40px] shadow-[0px_0px_10px_orange]  rounded-[50px] w-[300px] flex gap-2 ">
         <img src={search} alt="" />
         <input
@@ -33,18 +33,18 @@ export const Sidebar = () => {
 
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-3 ">
-          <div className="flex gap-1">
+          <div className="flex gap-1 items-center">
             <h4 className="font-bold">4</h4>
-            <p>Filters applied</p>
+            <p className="text-[13px]">Filters applied</p>
           </div>
-          <div className="flex gap-1">
+          <div className="flex gap-1 items-center">
             <h4 className="font-bold">26</h4>
-            <p>Results</p>
+            <p className="text-[13px]">Results</p>
           </div>
 
-          <div className="flex gap-1 bg-grey3 px-[10px] py-[7px]">
+          <div className="flex gap-1 bg-grey3 px-[10px] py-[7px] items-center">
             <img src={bin} alt="bin" />
-            <p>Reset filter</p>
+            <p className="text-[13px]">Reset filter</p>
           </div>
         </div>
 
